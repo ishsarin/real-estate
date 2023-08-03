@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+  background-color: #f9f9f9;
+  overflow-y: hidden;
+}
+
+
+.search_content{
+  display: flex;
+  justify-content:space-between ;
+}
+.search_select{
+  width: 16% !important;
+  color: rgb(128, 127, 127) !important;
+}
+
+.searching_wrapper{
+  background-color:white ;
+  padding-block: 2rem;
+  margin-inline: 15rem;
+  border: 1px solid #f9f9f9;
+}
+
+.search_wrapper{
+  padding-block: 4rem;
+  padding-inline: 15rem;
+}
+.search_details{
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-white{
+  background-color: white !important;
+  color: rgb(104, 6, 233) !important;
+  border: 1px solid rgb(104, 6, 233) !important;
+}
+  .btn-purple{
+  background-color: rgb(104, 6, 233) !important;
+  color: white !important;
+  border: 1px solid rgb(104, 6, 233) !important;
+}
+
+.search_details label{
+  color:black;
+  opacity: 0.3;
+  font-weight: 500;
+}
+.search_details option, .search_select option{
+  color:black;
+  font-weight: 500;
+}
+
+
+  .search_details div{
+  text-align: left;
+ 
+}
+
+.f-500{
+  font-weight: 500 !important;
+}
+
+.btn-search{
+  padding: 1rem  !important;
+  width: 8rem;
+  font-weight: 500 !important;
+}
+.ul{
+  display: flex !important;
+
+}
+
+.li{
+  flex: 0 0 33.33% !important;
+  padding-top: 4rem;
+  
+
+}
+.card_wrapper{
+  
+  -moz-box-shadow: 0px 3px 8px rgb(100,100,100);
+  -webkit-box-shadow: 0px 3px 8px rgb(100,100,100);
+  box-shadow: 0px 3px 8px rgb(100,100,100);
+    margin: auto;
+    width: 88%;
+    
+    height: 47vh;
+    border-radius: 5px ;
+}
+
+
+
+.card_img{
+  width: 320px;
+  
+  height: 21vh;
+  border-radius: 5px;
+}
+
+.card_content{
+    margin: auto;
+    text-align: left;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    
+    
+}
+.property_card{
+  margin: auto;
+  width: 75%;
+ 
+}
+.price{
+  color: rgb(104, 6, 233) !important;;
+  font-weight: 700;
+  font-size: large;
+}
+
+.card_location{
+  font-weight: 700;
+  color: black;
+  font-size: larger;
+}
+.card_address{
+  font-weight: 400;
+  color: gray;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.heart{
+  display: inline-block;
+  float: right;
+  border-radius: 50% !important;
+  border: 1px solid rgb(190, 190, 190);
+  /* margin-right: 1rem; */
+  
+}
+.info{
+  font-size: 14px;
+  color: gray;
+  
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.navbar-brand{
+  font-size: 16px;
+  font-weight: 700 !important;
+}
+.nav-link{
+  color: black !important;
+  font-weight: 600 !important;
+}
+
+.nav-link:hover{
+  color: rgb(130, 14, 238) !important;
+  background-color: rgb(198, 156, 236);
+  font-weight: 500 !important;
+
+}
+
+@media only screen and  (min-width: 1600px) {
+  .card_img{
+    width: 310px;
+    
+  }
+  .card_wrapper{
+    height: 40vh;
+    width: 68%;
+   
+  }
+}
