@@ -1,11 +1,11 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+
 const Properties_API = () => {
   useEffect(() => {
     getAPI();
   }, []);
 
-  const [d, getData] = useState([{}]);
+  const [data, setData] = useState([]);
 
   const getAPI = async () => {
     const res = await fetch(
@@ -21,12 +21,14 @@ const Properties_API = () => {
     );
 
     try {
-      const data = await res.json();
-      console.log(data.hits);
-      console.log(d);
-      getData(data.hits);
-    } catch (e) {
-      console.error(e);
+      const response = await fetch(url, options);
+      const result = await response.json();
+
+      setData([result.data.home]);
+
+      console.log(result.data.home);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -34,8 +36,11 @@ const Properties_API = () => {
     <>
       <div>Properties_API</div>
       <div>
-        {d.map((item, id) => (
-          <div key={id}>{item.agency.name}</div>
+        {data.map((property, index) => (
+          <div key={index}>
+            <div>{property.last_sold_price}</div>
+            <img src={property.photos[0].href} />
+          </div>
         ))}
       </div>
     </>
