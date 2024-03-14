@@ -8,17 +8,15 @@ const Properties_API = () => {
   const [data, setData] = useState([]);
 
   const getAPI = async () => {
-    const res = await fetch(
-      "https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-rent&hitsPerPage=25&page=0&lang=en&sort=city-level-score&rentFrequency=monthly&categoryExternalID=3",
-      {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key":
-            "e37de9475cmshc91754dee8d657cp1f9b19jsnf9309833a34a",
-          "X-RapidAPI-Host": "bayut.p.rapidapi.com",
-        },
-      }
-    );
+    const url =
+      "https://realty-in-us.p.rapidapi.com/properties/v3/detail?property_id=4599450556";
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "e37de9475cmshc91754dee8d657cp1f9b19jsnf9309833a34a",
+        "X-RapidAPI-Host": "realty-in-us.p.rapidapi.com",
+      },
+    };
 
     try {
       const response = await fetch(url, options);
